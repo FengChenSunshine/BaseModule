@@ -1,0 +1,85 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//Gradle配置.
+//https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.AppExtension.html
+
+ext {
+    android = [
+            compileSdkVersion    : 28,
+            minSdkVersion        : 19,
+            targetSdkVersion     : 28,
+            supportLibraryVersion: "28.0.0"
+
+            , versionCode_dev    : 1
+            , versionName_dev    : "dev0.0.1"
+
+            , versionCode_navite : 1
+            , versionName_navite : "navite0.0.1"
+
+            , versionCode_beta   : 1
+            , versionName_beta   : "beta0.0.1"
+
+            , versionCode_release: 1
+            , versionName_release: "v1.0.0"
+    ]
+
+    //分包：需要在app module gradle Android.defaultConfig节点下添加 multiDexEnabled true
+
+    library = [
+            junit               : "junit:junit:4.12",
+            test_runner         : "com.android.support.test:runner:1.0.2",
+            test_espresso_core  : "com.android.support.test.espresso:espresso-core:3.0.2",
+            android_junit_runner: "android.support.test.runner.AndroidJUnitRunner",
+
+            lifecycle           : "android.arch.lifecycle:extensions:1.1.1",
+            support_appcompat   : "com.android.support:appcompat-v7:28.0.0",
+            constraint_layout   : "com.android.support.constraint:constraint-layout:1.1.3",
+            support_annotations : "com.android.support:support-annotations:28.0.0",
+            support_recyclerview: "com.android.support:recyclerview-v7:28.0.0",
+            support_design      : "com.android.support:design:28.0.0",
+            support_fragment    : "com.android.support:support-fragment:28.0.0",
+            support_compat      : "com.android.support:support-compat:28.0.0",
+            support_cardview    : "com.android.support:cardview-v7:28.0.0",
+            //google弹性布局：https://github.com/google/flexbox-layout
+            flexbox             : "com.google.android:flexbox:1.0.0",
+
+            //Glide https://github.com/bumptech/glide
+            glide               : "com.github.bumptech.glide:glide:4.9.0",
+            glide_compiler      : "com.github.bumptech.glide:compiler:4.9.0",
+            //https://github.com/greenrobot/EventBus
+            event_bus           : "org.greenrobot:eventbus:3.1.1",
+            //https://github.com/youth5201314/banner
+            banner              : "com.youth.banner:banner:1.4.10",
+            //网络请求：https://github.com/jeasonlzy/okhttp-OkGo
+            OkGo                : "com.lzy.net:okgo:3.0.4",
+            //json数据解析：https://github.com/google/gson/tree/master/gson
+            gson                : "com.google.code.gson:gson:2.8.5",
+            //动态权限申请：https://github.com/tbruyelle/RxPermissions
+            permissions         : 'com.github.tbruyelle:rxpermissions:2.x.v0.9.3',
+
+            //UI基础库.
+            base_ui             : "com.github.FengChenSunshine:BaseUi:1.0.0",
+            //页面状态视图管理库.
+            uiStatus            : "com.github.FengChenSunshine:UiStatus:1.0.3",
+            //路由库.
+            router              : "com.github.FengChenSunshine:LibraryRouter:1.0.1",
+            //数据模型基类库.
+            model               : "com.github.FengChenSunshine:LibraryModel:v1.0.0",
+            //版本更新库.
+            version_update      : "com.github.FengChenSunshine:VersionUpdate:v1.0.4",
+            //通用基础资源库.
+            resource            : "com.github.FengChenSunshine:LibraryResource:1.0.2",
+            //基础控件扩展支持库.
+            support_widget      : "com.github.FengChenSunshine:SupportWidget:1.0.0",
+            //常用工具类库.
+            utils               : "com.github.FengChenSunshine:Utils:1.0.1",
+            //组件服务.
+            module_service      : "com.github.FengChenSunshine:ModuleService:1.0.0",
+            //网络请求框架.
+            api                 : "com.github.FengChenSunshine:Api:1.0.1",
+            //图片加载框架.
+            image_loader        : "com.github.FengChenSunshine:ImageLoader:1.0.0",
+
+    ]
+
+}

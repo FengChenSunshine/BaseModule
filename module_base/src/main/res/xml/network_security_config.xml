@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!--修改网络安全配置，使APP在9.0以上、http网络下可以访问网络-->
+    <base-config cleartextTrafficPermitted="true" />
+
+</network-security-config>
