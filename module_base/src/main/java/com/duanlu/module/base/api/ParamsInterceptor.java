@@ -1,4 +1,4 @@
-package com.duanlu.module.base.net;
+package com.duanlu.module.base.api;
 
 import android.support.annotation.NonNull;
 

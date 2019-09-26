@@ -1,4 +1,4 @@
-package com.duanlu.module.base.net;
+package com.duanlu.module.base.api;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,6 @@ import com.duanlu.api.BaseCallback;
 import com.duanlu.baseui.activity.BaseActivity;
 import com.duanlu.baseui.adapter.CommonLoadMoreLayout;
 import com.duanlu.baseui.dialog.HintDialog;
-import com.duanlu.model.Model;
 import com.duanlu.utils.NetworkUtils;
 import com.fengchen.uistatus.annotation.UiStatus;
 import com.fengchen.uistatus.controller.IUiStatusController;
@@ -23,9 +22,9 @@ import com.lzy.okgo.request.base.Request;
  * @author 段露
  * @version 2.0.0
  * @class ApiCallback
- * @describe 网络请求
+ * @describe 网络请求.
  */
-public abstract class ApiCallback<T extends Model> extends BaseCallback<T> {
+public abstract class ApiCallback<T> extends BaseCallback<T> {
 
     private boolean isShowDialog;//是否显示进度框，true显示，false不显示，默认显示。
     private HintDialog mLoadingDialog;

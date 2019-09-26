@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
+import android.support.annotation.NonNull;
 
 import com.duanlu.baseui.fragment.ShellActivity;
 import com.duanlu.imageloader.ImageLoader;
@@ -86,6 +87,12 @@ public abstract class ModuleApplication extends RootApplication {
                 .setCornerDefault(R.drawable.common_shape_image_loader_placeholder_corner, R.drawable.common_shape_image_loader_placeholder_corner);
         //初始化图片加载框架.
         ImageLoader.init(new GlideLoader());
+    }
+
+    @NonNull
+    @Override
+    protected String getAuthority() {
+        return getPackageName() + ".FileProvider";
     }
 
     private OkHttpClient makeHttpClick() {

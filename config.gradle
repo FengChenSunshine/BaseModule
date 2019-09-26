@@ -72,7 +72,7 @@ ext {
             //基础控件扩展支持库.
             support_widget      : "com.github.FengChenSunshine:SupportWidget:1.0.0",
             //常用工具类库.
-            utils               : "com.github.FengChenSunshine:Utils:1.0.1",
+            utils               : "com.github.FengChenSunshine:Utils:1.0.2",
             //组件服务.
             module_service      : "com.github.FengChenSunshine:ModuleService:1.0.0",
             //网络请求框架.
