@@ -2,8 +2,8 @@ package com.duanlu.module.base.ui;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.annotation.CallSuper;
-import android.support.annotation.Nullable;
+import androidx.annotation.CallSuper;
+import androidx.annotation.Nullable;
 
 import com.duanlu.baseui.activity.BaseActivity;
 import com.duanlu.utils.PreferencesManager;

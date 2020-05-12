@@ -1,13 +1,14 @@
 package com.duanlu.module.base.api;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.SwipeRefreshLayout;
 
+import androidx.annotation.NonNull;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.duanlu.adapter.CommonLoadMoreLayout;
 import com.duanlu.api.ApiException;
 import com.duanlu.api.BaseCallback;
 import com.duanlu.baseui.activity.BaseActivity;
-import com.duanlu.baseui.adapter.CommonLoadMoreLayout;
 import com.duanlu.baseui.dialog.HintDialog;
 import com.duanlu.utils.NetworkUtils;
 import com.fengchen.uistatus.annotation.UiStatus;

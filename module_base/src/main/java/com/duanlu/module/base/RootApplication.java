@@ -3,7 +3,8 @@ package com.duanlu.module.base;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.duanlu.router.UiPage;
 import com.duanlu.utils.AppFolderManager;
@@ -35,7 +36,9 @@ public abstract class RootApplication extends Application implements Application
         configLoggerFactory();
 
         //初始化全局未铺货异常处理器.
-        CrashHandler.getInstance().init(this, makeUncaughtExceptionHandler());
+        if (useCustomUncaughtExceptionHandler()) {
+            CrashHandler.getInstance().init(this, makeUncaughtExceptionHandler());
+        }
 
         //初始化应用程序前后台改变监听器.
         AppForegroundBackgroundManager.init(this, this::appForegroundBackgroundChanged);
@@ -57,6 +60,15 @@ public abstract class RootApplication extends Application implements Application
 
         //配置图片加载框架.
         configImageLoader();
+    }
+
+    /**
+     * 是否启用自定义的未知异常捕获器.
+     *
+     * @return true启用, false不启用.默认非debug模式时启用.
+     */
+    protected boolean useCustomUncaughtExceptionHandler() {
+        return !isDebug();
     }
 
     protected abstract void init();

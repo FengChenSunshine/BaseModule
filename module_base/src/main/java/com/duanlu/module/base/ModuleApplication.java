@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.duanlu.baseui.fragment.ShellActivity;
 import com.duanlu.imageloader.ImageLoader;
@@ -82,9 +82,9 @@ public abstract class ModuleApplication extends RootApplication {
     protected void configImageLoader() {
         //配置图片加载框架默认占位图.
         PlaceholderProvider.getInstance()
-                .setDefault(R.drawable.common_shape_image_loader_placeholder, R.drawable.common_shape_image_loader_placeholder)
-                .setCircleDefault(R.drawable.common_shape_image_loader_placeholder_circle, R.drawable.common_shape_image_loader_placeholder_circle)
-                .setCornerDefault(R.drawable.common_shape_image_loader_placeholder_corner, R.drawable.common_shape_image_loader_placeholder_corner);
+                .setDefault(R.drawable.resource_shape_image_loader_placeholder, R.drawable.resource_shape_image_loader_placeholder)
+                .setCircleDefault(R.drawable.resource_shape_image_loader_placeholder_circle, R.drawable.resource_shape_image_loader_placeholder_circle)
+                .setCornerDefault(R.drawable.resource_shape_image_loader_placeholder_corner, R.drawable.resource_shape_image_loader_placeholder_corner);
         //初始化图片加载框架.
         ImageLoader.init(new GlideLoader());
     }

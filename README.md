@@ -17,6 +17,11 @@ Add it in your root build.gradle at the end of repositories:
 	}
 
 ## 历史版本
+
+### 1.0.2 待发布
+
+1.升级BaseUi库版本到1.0.2
+
 ### 1.0.1
 
 1.移除ApiCallback类泛型必须继承com.duanlu.model.Model限制，因为这个限制会导致List<T>等格式无法使用.
